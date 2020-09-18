@@ -1,0 +1,44 @@
+/* miniprogram/pages/courtDetail/courtDetail.wxss */
+.courtDetail {
+  width: 100%;
+  padding: 16rpx 16rpx 0 16rpx;
+  box-sizing: border-box;
+}
+.courtDetail_container {
+  margin-bottom: 32rpx;
+}
+.courtDetail_container .court_image {
+  width: 100%;
+  height: 360rpx;
+  margin-bottom: 10rpx;
+}
+.title {
+  font-size: 28rpx;
+  color: #666;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.container_title::after {
+  content: "";
+  display: inline-block;
+  width: 60rpx;
+  height: 1rpx;
+  background-color: #666;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.courtDetail_container .text {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.container_address {
+  position: relative;
+}
+.icon_1 {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 16rpx;
+}

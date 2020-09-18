@@ -1,0 +1,12 @@
+<!--miniprogram/pages/courtli/courtli.wxml-->
+<view class="courtlist_container">
+  <block wx:for="{{courtlists}}" wx:key="index">
+    <view class="courtlist_item" data-id="{{item._id}}" bindtap="showCourtDetail">
+      <image src="{{item.img}}"></image>
+      <view class="court_name">{{item.name}}</view>
+      <view class="court_address">{{item.address}}</view>
+      <view class="court_num">当前约战的球队有 {{item._id}} 支</view>
+    </view>
+    
+  </block>
+</view>

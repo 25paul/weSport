@@ -1,0 +1,26 @@
+<!--miniprogram/pages/courtDetail/courtDetail.wxml-->
+<view class="courtDetail">
+  <view class="courtDetail_container">
+    <image class="court_image" src="{{courtDetailData.img}}"></image>
+    <view class="container_title title">
+      <text>球场信息</text>
+    </view>
+    <view class="container_name text">{{courtDetailData.name}}</view>
+    <view class="text">球场电话: {{courtDetailData.phone}}</view>
+    <view class="text container_address" 
+          data-latitude="{{courtDetailData.latitude}}" 
+          data-longitude="{{courtDetailData.longitude}}" 
+          data-address="{{courtDetailData.address}}"
+          data-name="{{courtDetailData.name}}"
+          bindtap="showMap">
+      <text>{{courtDetailData.address}}</text>
+      <image class="icon_1" src="../../images/icon/point.png"></image>
+    </view>
+  </view>
+  <view class="courtDetail_connection">
+    <view class="connection_title title">
+      <text>预约球队</text>
+    </view>
+  </view>
+</view>
+ 

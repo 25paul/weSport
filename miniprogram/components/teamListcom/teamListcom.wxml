@@ -1,0 +1,17 @@
+<!--components/authorization/authorization.wxml-->
+<!-- <view class="list_container"> -->
+	<block wx:for="{{teamData}}" wx:key = "{{index}}">
+	  <view class="list_item" data-openid="{{item.openId}}" data-item="{{item}}" bindtap="showDetail">
+	      <view class="item_image">
+	        <image wx:if="{{item.type === 'b'}}" src="../../images/icon/basketball.png"></image>
+	        <image wx:if="{{item.type === 'f'}}" src="../../images/icon/football.png"></image>
+	      </view>
+	      <view class="item_text">
+	          <view class="item_name text_item">球队：{{item.name}}</view>
+	          <view class="item_leader text_item">负责人：{{item.leader}}</view>
+	          <view class="item_address text_item">约球地址：{{item.selectCourt.address}}</view>
+	          <view class="item_time text_item">约球时间：{{item.selectTime}}</view>
+	      </view>
+	  </view>
+	</block>
+<!-- </view> -->

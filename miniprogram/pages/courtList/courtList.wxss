@@ -1,0 +1,33 @@
+/* miniprogram/pages/courtli/courtli.wxss */
+page {
+  background-color: #ddd;
+}
+.courtlist_container {
+  width: 100%;
+  height: 100%;
+  padding: 20rpx 20rpx 0 20rpx;
+  background-color: #ccc;
+  box-sizing: border-box;
+}
+
+.courtlist_item {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 16rpx;
+  margin-bottom: 16rpx;
+  box-sizing: border-box;
+}
+.courtlist_item image {
+  width: 100%;
+  height: 240rpx;
+  background-color: #aaa;
+}
+.courtlist_item .court_name {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.court_address, .court_num {
+  font-size: 32rpx;
+  color: #555;
+}

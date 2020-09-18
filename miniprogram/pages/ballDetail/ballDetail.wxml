@@ -1,0 +1,37 @@
+<!--miniprogram/pages/ballDetail/ballDetail.wxml-->
+<view class="b_detail_container">
+  <view class="detail_top" bindtap="reverseTeam" data-item="curTeamitem">预约该球队</view>
+  <view class="detail_header">
+    <view class="header_image"></view>
+    <view class="header_text">球队详情</view>
+  </view>
+  <view class="detail_main">
+    <view class="main_item two_block">
+      <span class="item_title">球队名：</span>
+      <span class="item_message">{{curTeamitem.name}}</span>
+    </view>
+    <view class="main_item two_block">
+      <span class="item_title">类型：</span>
+      <span class="item_message">{{curTeamitem.type}}</span>
+    </view>
+    <view class="main_item two_block">
+      <span class="item_title">负责人：</span>
+      <span class="item_message">{{curTeamitem.leader}}</span>
+    </view>
+    <view class="main_item one_block">
+      <view class="item_title">球员：</view>
+      <view class="item_list">
+        <span>姓名</span>
+        <span>年龄</span>
+        <span>身高(cm)</span>
+        <span>体重(kg)</span>
+      </view>
+      <view class="item_list item_bottom" wx:for = "{{curTeamitem.lists}}" :key="{{index}}">
+        <span>{{item.name}}</span>
+        <span>{{item.age}}</span>
+        <span>{{item.height}}</span>
+        <span>{{item.weight}}</span>
+      </view>
+    </view>
+  </view>      
+</view>

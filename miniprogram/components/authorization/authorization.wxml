@@ -1,0 +1,4 @@
+<!--components/authorization/authorization.wxml-->
+<button bind:getuserinfo="onGetUserInfo" open-type='{{openType}}' class="container">
+  {{buttonVal}}
+</button>

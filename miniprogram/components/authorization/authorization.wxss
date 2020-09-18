@@ -1,0 +1,7 @@
+/* components/authorization/authorization.wxss */
+.container {
+  width: 40rpx;
+  height: 90rpx;
+  border-radius: 4px;
+  background: #D2691E;
+}

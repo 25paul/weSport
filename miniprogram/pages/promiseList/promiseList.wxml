@@ -1,0 +1,20 @@
+<!--miniprogram/pages/footballList/footballList.wxml-->
+<text>miniprogram/pages/footballList/footballList.wxml</text>
+<view class="together_container">
+  <view class="together_header">
+    <view class="title">weSport</view>
+  </view>
+  <view class="together_list">
+    <view class="together_item" wx:for="teamData" wx:key="index">
+      <view class="item_team">
+        <view class="home_team topitem">{{item[0].name}}</view>
+        <view class="icon_team topitem">VS</view>
+        <view class="guest_team topitem">{{item[1].name}}</view>
+      </view>
+      <view class="item_message">
+        <view class="time_message bottomitem">时间: {{item[0].leader}}</view>
+        <view class="address_message bottomitem">地址: {{item[0].leader}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--miniprogram/pages/myPublic/myPublic.wxml-->
+<view class="public_container">
+  <view class="public_select" wx:if="!hasPublic">
+      <view class="select_wrap">
+        <view class="select_current">
+          <text class="current_name">{{curSelect.name}}</text>
+        </view>
+        <view class="select_option">
+          <view class="option" wx:for="{{selectOptions}}" wx:key="index" data-item="{{item}}" bindtap="selectChange">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+      <view class="select_wrap select_time">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            选择时间: {{date}}
+          </view>
+        </picker>
+      </view>
+      <view class="public_button" bindtap="publicChange">发布</view>
+  </view>
+  <view class="public_show" wx:if="hasPublic"></view>
+</view>

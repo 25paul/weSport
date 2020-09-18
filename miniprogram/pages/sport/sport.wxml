@@ -1,0 +1,39 @@
+<!--miniprogram/pages/sport/sport.wxml-->
+<view class="sport">
+  <view class="container">
+    <view class="container_header">
+      <view class="page-section page-section-spacing swiper">
+        <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{background}}" wx:key="*this">
+            <swiper-item>
+              <image src="{{item}}" style="width:100%; height:100%"></image>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <view class="container_main">
+      <view class="main_list">
+        <view class="list_court list_item" bindtap="showCourtList">
+            <image class="court_img" src="../../images/icon/court.png"></image>
+          <text class="tip">球场</text>
+        </view>
+        <view class="list_baskerball list_item" data-type="b" bindtap="showball">
+            <image class="bball_img" src="../../images/icon/bball.png"></image>
+          <text class="tip">篮球</text>
+        </view>
+        <view class="list_football list_item" data-type="f" bindtap="showball">
+            <image class="fball_img" src="../../images/icon/fball.png"></image>
+          <text class="tip">足球</text>
+        </view>
+        <view class="list_reservation list_item" bindtap="showTogether">
+            <image class="contact_img" src="../../images/icon/contact.png"></image>
+          <text class="tip">约球</text>
+        </view>
+      </view>
+      <view class="main_content"></view>
+    </view>
+    <view class="container_reservation"></view>
+  </view>
+</view>

@@ -1,0 +1,50 @@
+/* miniprogram/pages/basketballList/basketballList.wxss */
+
+.b_container {
+  width: 100%;
+  height: 100%;
+  padding: 25rpx;
+  box-sizing: border-box;
+}
+.b_item {
+  width: 100%;
+  height: 205rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  background-color: #ffffff;
+  display: flex;
+  box-shadow: 0 10rpx 30rpx 0 rgba(66, 66, 66, 0.3);
+  margin-bottom: 20rpx;
+}
+.item_image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin-right: 25rpx;
+}
+.item_image image {
+  width: 100%;
+  height: 100%;
+}
+.item_text {
+  flex: 1;
+}
+.item_name {
+  font-size: 45rpx;
+  font-weight: bold;
+}
+.item_image {
+  font-size: 35rpx;
+  color: #666;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.item_leader, .item_address, .item_time {
+  font-size: 28rpx;
+  color: #666;
+  width: 480rpx;
+  height: 40rpx;
+  overflow-x: hidden;
+}
