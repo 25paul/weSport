@@ -7,10 +7,12 @@
 	        <image wx:if="{{item.type === 'f'}}" src="../../images/icon/football.png"></image>
 	      </view>
 	      <view class="item_text">
-	          <view class="item_name text_item">球队：{{item.name}}</view>
-	          <view class="item_leader text_item">负责人：{{item.leader}}</view>
-	          <view class="item_address text_item">约球地址：{{item.selectCourt.address}}</view>
-	          <view class="item_time text_item">约球时间：{{item.selectTime}}</view>
+	          <view wx:if="hasPromise" class="item_name text_item">球队：{{item.name}}</view>
+	          <view wx:if="{{hasPromise && item.type === 'f'}}" class="item_type text_item">约球类型：{{item.type === 'f' ? '足球' : '篮球'}}</view>
+	          <view wx:if="{{hasPromise && item.type === 'b'}}" class="item_type text_item">约球类型：{{item.type === 'b' ? '篮球' : '足球'}}</view>
+	          <view wx:if="{{!hasPromise}}" class="item_leader text_item">负责人：{{item.leader}}</view>
+	          <view wx:if="{{!hasPromise}}" class="item_address text_item">约球地址：{{item.selectCourt.address}}</view>
+	          <view wx:if="{{!hasPromise}}" class="item_time text_item">约球时间：{{item.selectTime}}</view>
 	      </view>
 	  </view>
 	</block>

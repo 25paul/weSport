@@ -7,16 +7,17 @@
   height: 72rpx;
   width: 24%;
   line-height: 72rpx;
-  background-color: #fab25f;
   border-radius: 20rpx;
   text-align: center;
   margin-bottom: 20rpx;
+  border: 1px solid #888;
 }
 
 .team_add  button {
   margin-top: 100rpx;
-  background-color: #fab25f;
   color: #666;
+  border: 1px solid #888;
+  border-radius: 10rpx
 }
 .team_item {
   display: flex;
@@ -52,4 +53,7 @@
 }
 .nowork {
   pointer-events: none;
+}
+.margin_left {
+  margin-left: 20rpx;
 }

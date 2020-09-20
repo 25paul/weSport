@@ -5,6 +5,12 @@ Component({
    */
   properties: {
     curTeamitem: {
+      type: Object
+    },
+    hasPromise: {
+      type: Boolean
+    },
+    prevRoute: {
       type: String
     }
   },
@@ -21,6 +27,14 @@ Component({
    */
   methods: {
     reverseTeam: function (e) {
+
+    },
+    accept: function (e) {
+      var curselectitem = e.currentTarget.dataset.item;
+      console.log('curselectitem', curselectitem)
+      this.triggerEvent('fromotherselect', curselectitem, '111111')
+    },
+    reject: function (e) {
 
     }
   }

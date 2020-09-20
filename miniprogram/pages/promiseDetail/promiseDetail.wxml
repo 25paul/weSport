@@ -1,0 +1,4 @@
+<!--miniprogram/pages/promiseDetail/promiseDetail.wxml-->
+<view class="promisedetail_container">
+	<teamDetailcom curTeamitem="{{teamItem}}" hasPromise="true" prevRoute="{{prevRoute}}" bindfromotherselect="fromotherselect"></teamDetailcom>
+</view>

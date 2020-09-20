@@ -5,7 +5,7 @@
   </view>
   <view class="team_edit" wx:if="{{hasTeam}}">
     <view class="top_button button" bindtap="teamEdit">
-      编辑
+      点击编辑
     </view>
     <view class="edit_list {{!hasWork ? 'nowork' : ''}}" >
       <view class="team_name team_item">
@@ -16,8 +16,8 @@
       </view>
       <view class="team_type team_item">球类：
         <radio-group bindchange="radiochange">
-          <radio value='f'>足球</radio>
-          <radio value='b' checked>篮球</radio>
+          <radio value='f' color="#888">足球</radio>
+          <radio value='b' color="#888" checked class="margin_left">篮球</radio>
         </radio-group>
       </view>
       <!-- <block class="team_name" wx:for="{{curTeam.lists}}" wx:key="{{index}}"> -->
@@ -36,16 +36,18 @@
       <view class="player_count">
         <view class="box">
           <view class="add_button" bindtap="addPlayer">
-            <image src="../../images/icon/add.png"></image>
+            <!-- <image src="../../images/icon/add.png"></image> -->
+            添加
           </view>
           <view class="reduce_button" bindtap="reducePlayer">
-            <image src="../../images/icon/reduce.png"></image>
+            删除
+            <!-- <image src="../../images/icon/reduce.png"></image> -->
           </view>
         </view>
       </view>
     </view>
     <view class="button_button button" bindtap="teamSave">
-     保存
+     点击保存
     </view>
   </view>
 </view>

@@ -1,0 +1,53 @@
+/* miniprogram/pages/promiseSuccessDetail/promiseSuccessDetail.wxss */
+
+.success_container {
+	width: 100%;
+	padding: 10rpx;
+	box-sizing: border-box;
+}
+.success_header {
+	margin-bottom: 10rpx;
+}
+.success_header .time {
+	margin-bottom: 10rpx;
+}
+
+.home_title, .guest_title {
+	margin-top: 64rpx;
+	font-weight: bold;
+	color: #666;
+}
+
+.two_block {
+  width: 100%;
+  height: 105rpx;
+  display: flex;
+  align-items: center
+}
+.item_title {
+  width: 225rpx;
+}
+.item_message {
+  flex: 1;
+}
+.one_block {
+  width: 100%;
+}
+.one_block .item_title {
+  height: 105rpx;
+  line-height: 105rpx;
+}
+.item_list {
+  width: 100%;
+  height: 105rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.item_list span {
+  display: inline-block;
+  width: 24%;
+}
+.item_bottom {
+  border-bottom: 2rpx solid #aaa;
+}

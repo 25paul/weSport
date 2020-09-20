@@ -6,6 +6,9 @@ Component({
   properties: {
     teamData: {
       type: Array
+    },
+    hasPromise: {
+      type: Boolean
     }
   },
 
@@ -20,8 +23,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    showDetail: function () {
-      
+    showDetail: function (e) {
+      let item = JSON.stringify( e.currentTarget.dataset.item);
+      if (this.data.hasPromise) {
+        wx.navigateTo({
+          url: '../../pages/promiseDetail/promiseDetail?item='+item
+        })
+      }
     }
   }
 })

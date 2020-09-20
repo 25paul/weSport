@@ -1,0 +1,5 @@
+.fromother_container {
+	padding: 10rpx;
+	width: 100%;
+	box-sizing: border-box;
+}

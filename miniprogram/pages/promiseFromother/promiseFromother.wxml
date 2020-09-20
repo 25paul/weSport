@@ -1,2 +1,4 @@
 <!--miniprogram/pages/footballList/footballList.wxml-->
-<text>miniprogram/pages/footballList/footballList.wxml</text>
+<view class="fromother_container">
+	<teamList teamData="{{teamData}}" hasPromise="true"></teamList>
+</view>

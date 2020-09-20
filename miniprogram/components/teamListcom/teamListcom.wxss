@@ -28,7 +28,10 @@
   height: 100%;
 }
 .item_text {
+  width: 60%;
+  overflow: hidden;
   flex: 1;
+  white-space: nowrap;
 }
 .item_name {
   font-size: 45rpx;

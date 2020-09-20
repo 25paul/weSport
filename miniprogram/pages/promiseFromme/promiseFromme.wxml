@@ -1,4 +1,4 @@
 <!--miniprogram/pages/footballList/footballList.wxml-->
-<text>miniprogram/pages/footballList/footballList.wxml</text>
-
-<text>获取球队列表中的fromme数据并遍历显示：直接使用球队列表和球队详情</text>
+<view class="fromme_container">
+	<teamList teamData="{{teamData}}" hasPromise="true"></teamList>
+</view>

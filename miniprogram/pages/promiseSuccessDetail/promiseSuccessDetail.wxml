@@ -1,0 +1,58 @@
+<view class="success_container">
+	<view class="success_detail">
+		<view class="success_header">
+			<view class="time">时间：{{togetherData.home.selectTime}}</view>
+			<view class="address">地址：{{togetherData.home.selectCourt.address}}</view>
+		</view>
+		<view class="success_main">
+			<view class="home_title">主队信息</view>
+			<view class="main_item two_block">
+		      <span class="item_title">球队名：</span>
+		      <span class="item_message">{{togetherData.home.name}}</span>
+		    </view>
+		    <view class="main_item two_block">
+		      <span class="item_title">负责人：</span>
+		      <span class="item_message">{{togetherData.home.leader}}</span>
+		    </view>
+		    <view class="main_item one_block">
+		      <view class="item_title">球员列表：</view>
+		      <view class="item_list">
+		        <span>姓名</span>
+		        <span>年龄</span>
+		        <span>身高(cm)</span>
+		        <span>体重(kg)</span>
+		      </view>
+		      <view class="item_list item_bottom" wx:for = "{{togetherData.home.lists}}" :key="{{index}}">
+		        <span>{{item.name}}</span>
+		        <span>{{item.age}}</span>
+		        <span>{{item.height}}</span>
+		        <span>{{item.weight}}</span>
+		      </view>
+		    </view>
+			<view class="guest_title">客队信息</view>
+			<view class="main_item two_block">
+		      <span class="item_title">球队名：</span>
+		      <span class="item_message">{{togetherData.guest.name}}</span>
+		    </view>
+		    <view class="main_item two_block">
+		      <span class="item_title">负责人：</span>
+		      <span class="item_message">{{togetherData.guest.leader}}</span>
+		    </view>
+		    <view class="main_item one_block">
+		      <view class="item_title">球员列表：</view>
+		      <view class="item_list">
+		        <span>姓名</span>
+		        <span>年龄</span>
+		        <span>身高(cm)</span>
+		        <span>体重(kg)</span>
+		      </view>
+		      <view class="item_list item_bottom" wx:for = "{{togetherData.guest.lists}}" :key="{{index}}">
+		        <span>{{item.name}}</span>
+		        <span>{{item.age}}</span>
+		        <span>{{item.height}}</span>
+		        <span>{{item.weight}}</span>
+		      </view>
+		    </view>
+		</view>
+	</view>
+</view>

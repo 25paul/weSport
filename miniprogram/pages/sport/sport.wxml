@@ -32,7 +32,22 @@
           <text class="tip">约球</text>
         </view>
       </view>
-      <view class="main_content"></view>
+      <view class="main_content">
+        <block wx:for="{{teamData}}" :key = "index">
+          <view class="b_item" data-openid="{{item.openId}}" data-item="{{item}}" bindtap="showDetail">
+              <view class="item_image">
+                <image wx:if="{{ballType === 'b'}}" src="../../images/icon/basketball.png"></image>
+                <image wx:if="{{ballType === 'f'}}" src="../../images/icon/football.png"></image>
+              </view>
+              <view class="item_text">
+                  <view class="item_name text_item">球队：{{item.name}}</view>
+                  <view class="item_leader text_item">负责人：{{item.leader}}</view>
+                  <view class="item_address text_item">约球地址：{{item.selectCourt.address}}</view>
+                  <view class="item_time text_item">约球时间：{{item.selectTime}}</view>
+              </view>
+          </view>
+        </block>
+      </view>
     </view>
     <view class="container_reservation"></view>
   </view>

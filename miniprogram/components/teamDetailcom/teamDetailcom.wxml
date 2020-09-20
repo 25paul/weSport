@@ -1,11 +1,13 @@
 <!--components/authorization/authorization.wxml-->
 <view class="detail_container">
-  <view class="detail_top"></view>
-  <view class="top_promise" bindtap="reverseTeam" data-item="curTeamitem">预约该球队</view>
-  <view class="top_select">
-    <view class="accept button">接受</view>
-    <view class="reject button">拒绝</view>
+  <view class="detail_top" wx:if="{{prevRoute !== 'pages/promiseFromme/promiseFromme'}}">
+    <view class="top_promise" wx:if="{{!hasPromise}}" bindtap="reverseTeam" data-item="{{curTeamitem}}">预约该球队</view>
+    <view  wx:if="{{hasPromise}}" class="top_select">
+      <view class="accept button" bindtap="accept" data-item="{{curTeamitem}}">接受</view>
+      <view class="reject button" bindtap="reject" data-item="{{curTeamitem}}">拒绝</view>
+    </view>
   </view>
+  
   <view class="detail_header">
     <view class="header_image"></view>
     <view class="header_text">球队详情</view>

@@ -159,6 +159,11 @@ Page({
             },
             //添加成功的回调函数
             success(res) {
+              wx.showToast({
+                title: '保存成功',
+                icon: 'success',
+                duration: 1000
+              })
               console.log(res._id)
               var id = res._id;
               self.setData({

@@ -25,7 +25,6 @@
     <view class='cell border-top promiseFromother' bindtap='promiseFromother'>预约我的球队</view>
     <view class='cell border-top promiseSuccess' bindtap='promiseSuccess'>预约成功</view>
     <view class='cell border-top collect' bindtap='collected'>我的收藏</view>
-    <view class='cell border-top' bindtap='release'>发布</view>
     <view class='cell border-top msg' bindtap='msgCenter'>消息中心<text class='point' wx:if="{{haveMsg}}"></text></view>
   </view>
 

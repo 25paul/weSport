@@ -12,7 +12,7 @@
         </view>
       </view>
       <view class="select_wrap select_time">
-        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <picker mode="date" value="{{date}}" start="2020-08-01" end="2030-08-01" bindchange="bindDateChange">
           <view class="picker">
             选择时间: {{date}}
           </view>

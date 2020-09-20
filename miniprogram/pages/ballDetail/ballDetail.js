@@ -58,51 +58,42 @@ Page({
     let self = this;
     let curSelectItem = this.data.curTeamitem;
     let curMyItem = this.data.myTeam;
-    let _obj = JSON.stringify(curSelectItem.fromother);
-    let other = JSON.parse(_obj) || [];    //所选的就是被预约的，这个所选的就是主队
-    let _obj2 = JSON.stringify(curMyItem.fromme);
-    let me = JSON.parse(_obj2) || [];   //来自我的预约的，我是客队
-    me.push(curSelectItem)
-    other.push(curMyItem)
+    // let _obj = JSON.stringify(curSelectItem.fromother);
+    // let other = JSON.parse(_obj) || [];    //所选的就是被预约的，这个所选的就是主队
+    // let _obj2 = JSON.stringify(curMyItem.fromme);
+    // let me = JSON.parse(_obj2) || [];   //来自我的预约的，我是客队
+    let other = curSelectItem.fromother || [];    //所选的就是被预约的，这个所选的就是主队
+    let me = curMyItem.fromme || [];   //来自我的预约的，我是客队
+    me.push({'name': curSelectItem.name, '_id': curSelectItem._id, 'openId': curSelectItem.openId, 'type': curSelectItem.type})
+    other.push({'name': curMyItem.name, '_id': curMyItem._id, 'openId':curMyItem.openId, 'type': curMyItem.type})
     curMyItem.fromme = this.moveRepeat(me);    //我预约其他发布的用户的
     curSelectItem.fromother = this.moveRepeat(other);    //其他发布的收到我的预约
     this.setData({
       curTeamitem: curSelectItem,
       myTeam: curMyItem
     })
-    console.log(curSelectItem._id)
+    console.log(this.data.curTeamitem._id)
     let aaaa = JSON.parse(JSON.stringify(other))
-    let id = this.data.curTeamitem._id;
+    let curid = this.data.curTeamitem._id;
+    let myid = this.data.myTeam._id;
     let fromotherVal = this.data.curTeamitem.fromother;
-    // teamTable.doc(id).remove({
-    //   success: res => {
-    //     console.log(res)
-    //     delete curSelectItem._id;
-    //     teamTable.add({
-    //       data: {
-    //         ...curSelectItem
-    //       },
-    //       //添加成功的回调函数
-    //       success(res) {
-    //         console.log(res._id)
-    //         var id = res._id;
-    //       },
-    //       fail: res => {
-    //         console.log(res)
-    //       }
-    //     });
-    //   },
-    //   fail: res => {
-    //     console.log(res)
-    //   }
-    // })   
-    console.log(curSelectItem)
-    console.log(curMyItem);
-    teamTable.doc(id).update({
+    let frommeVal = this.data.myTeam.fromme;
+    
+    teamTable.doc(curid).update({
       // data 传入需要局部更新的数据
       data: {
         // 表示将 done 字段置为 true
         fromother: fromotherVal
+      }
+    })
+    .then(console.log)
+    .catch(console.error)
+
+     teamTable.doc(myid).update({
+      // data 传入需要局部更新的数据
+      data: {
+        // 表示将 done 字段置为 true
+        fromme: frommeVal
       }
     })
     .then(console.log)

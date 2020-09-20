@@ -1,34 +1,11 @@
-// miniprogram/pages/sport/sport.js
+// miniprogram/pages/sportList/sportList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    background: ['../../images/activity/swiper_1.png', '../../images/activity/swiper_2.png', '../../images/activity/swiper_3.png'],
-    indicatorDots: true,
-    vertical: false,
-    autoplay: true,
-    interval: 2000,
-    duration: 500
-  },
 
-  showCourtList: function (e) {
-    wx.navigateTo({
-      url: '../courtList/courtList'
-    })
-  },
-  showball: function (e) {
-    console.log(e)
-    var ballType = e.currentTarget.dataset.type;
-    wx.navigateTo({
-      url: '../basketballList/basketballList?type='+ballType
-    })
-  },
-  showTogether: function (e) {
-    wx.navigateTo({
-      url: '../togetherList/togetherList'
-    })
   },
 
   /**

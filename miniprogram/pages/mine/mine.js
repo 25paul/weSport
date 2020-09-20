@@ -21,7 +21,7 @@ Page({
     })
   },
 
-  promiseFromme: function () {
+  promiseFromme: function (e) {
     wx.navigateTo({
       url: '../promiseFromme/promiseFromme'
     })
